@@ -1,0 +1,13 @@
+version: "3"
+service:
+  api:
+    image: registry:2
+    container_name: registry
+    volumes:
+    - data:/var/lib/registry
+    ports:
+    - 5000:5000
+  restart: always
+
+volumes:
+  data:
